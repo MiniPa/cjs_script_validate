@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allrisk><!-- 风险比对 风险配置 -->
+
+  <!-- 审税 -->
+  <ss>
+    <!-- 风险 -->
+    <risk>
+      <code>A0001</code>
+      <desc>审税的面积不能够大于20</desc>
+      <level>1</level>
+      <script>'desc'.indexOf('异常')>=1</script>
+      <!-- mj=20 -->
+      <!-- 可行的条件 符合javascript的语法规则
+        mj&lt;=20
+        'mj'.substr(0,1)=='2'
+        'desc'.indexOf('异常')>=1
+
+
+
+      -->
+    </risk>
+
+    <risk>
+      <code>A0002</code>
+      <desc>审税价格不能够大于20</desc>
+      <level>2</level>
+      <script>jg==20</script>
+    </risk>
+
+  </ss>
+
+  <!-- 申报 -->
+  <sb>
+    <risk>
+      <code>Q0003</code>
+      <desc>申报日期</desc>
+      <level>1</level>
+      <script>rq>20</script>
+    </risk>
+
+
+  </sb>
+
+  <cj>
+
+
+  </cj>
+
+</allrisk>
+
+

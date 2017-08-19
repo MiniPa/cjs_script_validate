@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<allrisk><!-- 风险比对 风险配置 -->
+  <!-- 备注：所有参数代码, and or 必须小写 -->
+
+
+  <!-- 审税 -->
+  <ss>
+    <risk> <code>Q001</code> <desc>非唯一税率为1%</desc> <level>3</level>
+      <script>qsqszyyt_dm==201 and fwtc_dm!=11 and sl_1==0.01 and ybtse!=0</script> </risk>
+
+    <risk> <code>Q002</code> <desc>非唯一、非保障性住房、&lt;90㎡、税率为1.5%</desc> <level>3</level>
+      <script>qsqszydm!=20103 and qsqszyyt_dm==201 and fwtc_dm!=11 and mj&lt;90 and sl_1==0.015 and ybtse!=0</script> </risk>
+
+    <risk> <code>Q003</code> <desc>唯一、>90㎡、税率为1%</desc> <level>3</level>
+      <script>qsqszyyt_dm==201 and fwtc_dm==11 and mj>90 and sl_1=0.015 and ybtse!=0</script> </risk>
+
+    <risk> <code>Q004</code> <desc>非唯一、非保障性住房、>90㎡、税率为1.5%</desc> <level>3</level>
+      <script>qsqszydm!=20103 and qsqszyyt_dm==201 and fwtc_dm!=11 and mj>90 and sl_1==0.015 and ybtse!=0</script> </risk>
+
+    <risk> <code>Q005</code> <desc>唯一、=&lt;90㎡、保障性住房、税率为1.5%</desc> <level>2</level>
+      <script>qsqszydm==20103 and qsqszyyt_dm==201 and fwtc_dm==11 and mj&lt;=90 and sl_1==0.015 and ybtse!=0</script> </risk>
+
+    <risk> <code>Q006</code> <desc>唯一、=&lt;90㎡、税率为1.5%</desc> <level>2</level>
+      <script>qsqszyyt_dm==201 and fwtc_dm==11 and mj&lt;=90 and sl_1==0.015 and ybtse!=0</script> </risk>
+
+    <risk> <code>Q007</code> <desc>非唯一税率为1%</desc> <level>1</level>
+      <script>qsqszyyt_dm==201 and fwtc_dm!=11 and sl_1==0.01 and ybtse==0</script> </risk>
+
+    <risk> <code>Q008</code> <desc>非唯一、非保障性住房、&lt;90㎡、税率为1.5%</desc> <level>1</level>
+      <script>qsqszydm!=20103 and qsqszyyt_dm==201 and fwtc_dm!=11 and mj&lt;90 and sl_1==0.015 and ybtse==0</script> </risk>
+
+    <risk> <code>Q009</code> <desc>唯一、>90㎡、税率为1%</desc> <level>1</level>
+      <script>qsqszyyt_dm==201 and fwtc_dm==11 and mj>90 and sl_1==0.01 and ybtse==0</script> </risk>
+
+    <risk> <code>Q010</code> <desc>非唯一、非保障性住房、>90㎡、税率为1.5%</desc> <level>1</level>
+      <script>qsqszydm!=20103 and qsqszyyt_dm==201 and fwtc_dm!=11 and mj>90 and sl_1==0.015 and ybtse==0</script> </risk>
+
+    <risk> <code>Q011</code> <desc>唯一、=&lt;90㎡、保障性住房、税率为1.5%</desc> <level>1</level>
+      <script>qsqszydm==20103 and qsqszyyt_dm==201 and fwtc_dm==11 and mj&lt;=90 and sl_1==0.015 and ybtse==0</script> </risk>
+
+    <risk> <code>Q012</code> <desc>唯一、=&lt;90㎡、税率为1.5%</desc> <level>1</level>
+      <script>qsqszyyt_dm==201 and fwtc_dm==11 and mj&lt;=90 and sl_1==0.015 and ybtse==0</script> </risk>
+
+    <risk> <code>Y001</code> <desc>非住房无印花税</desc> <level>3</level>
+      <script>(qsqszydx_dm==20105 or qsqszydx_dm==20205) and qsqszyyt_dm!=201 and ybtse==0</script> </risk>
+
+    <risk> <code>Y003</code> <desc>非住房无印花税记录</desc> <level></level>
+      <script>(qsqszydx_dm==20105 or qsqszydx_dm==20205) and qsqszyyt_dm!=201</script> </risk>
+
+    <risk> <code>Y002</code> <desc>住房个人有印花税</desc> <level>2</level>
+      <script>(qsqszydx_dm!=20105 or qsqszydx_dm!=20205) and qsqszyyt_dm==201 and ybtse!=0 and 'djxh'.substr(0,1)=='2'</script> </risk>
+
+    <risk> <code>T001</code> <desc>非居无土增</desc> <level>3</level>
+      <script>(qsqszydx_dm==20105 or qsqszydx_dm==20205) and qsqszyyt_dm!=201 and ybtse==0 and ssjmxzdm!=''</script> </risk>
+
+    <risk> <code>T002</code> <desc>非居无土增记录</desc> <level>2</level>
+      <script>!((qsqszydx_dm==20105 or qsqszydx_dm==20205) and qsqszyyt_dm!=201）</script> </risk>
+
+    <risk> <code>G001</code> <desc>普通住房个税为2%</desc> <level>2</level>
+      <script>qsqszydx_dm==20206 and qsqszyyt_dm==201 and mj&lt;=140 and sl_1=0.02 and jyjg&lt;=2300000 and sfptzfbz=Y</script> </risk>
+
+    <risk> <code>G002</code> <desc>非普通住房个税为1%</desc> <level>3</level>
+      <script>qsqszydx_dm==20206 and qsqszyyt_dm==201 and sl_1=0.02 and sfptzfbz=N and (mj&lt;=140 or jyjg>2300000)</script> </risk>
+  </ss>
+
+  <!-- 申报 -->
+  <sb>
+
+
+  </sb>
+
+  <cj>
+    <risk> <code>C001</code> <desc>无合同编号</desc> <level>1</level>
+      <script>htbh==''</script> </risk>
+
+    <risk> <code>C002</code> <desc>房屋属地税务机关非十七所</desc> <level>1</level>
+      <script>fwsdswjg_dm!=13102292700</script> </risk>
+
+    <risk> <code>C003</code> <desc>区县代码非青浦区</desc> <level>1</level>
+      <script>xzqhsz_dm!=310118</script> </risk>
+
+    <risk> <code>C004</code> <desc>房屋地址异常</desc> <level>1</level>
+      <script>'tdfwdz'.indexOf('及')>=1 or 'tdfwdz'.indexOf('层')>=1 or 'tdfwdz'.indexOf('(复式)')>=1 or 'tdfwdz'.indexOf('室室')>=1 or 'tdfwdz'.indexOf('青浦区')>=1 </script> </risk>
+
+    <risk> <code>C005</code> <desc>住房建筑面积>2000</desc> <level>1</level>
+      <script>qsqszydx_dm==20206 and qsqszyyt_dm==201 and mj>2000</script> </risk>
+
+    <risk> <code>C006</code> <desc>增量房合同编号长度异常</desc> <level>1</level>
+      <script>'htbh'.length!=12 and zrfcsfbz==1</script> </risk>
+
+    <risk> <code>C007</code> <desc>存量房合同编号长度异常</desc> <level>1</level>
+      <script>'htbh'.length!=20 and zrfcsfbz==2</script> </risk>
+
+    <risk> <code>C008</code> <desc>存量房上家所占份额合计不为100</desc> <level>1</level>
+      <script>zrfcsfbz==0 and szfe_2!=100</script> </risk>
+
+    <risk> <code>C009</code> <desc>存量房下家所占份额合计不为100</desc> <level>1</level>
+      <script>zrfcsfbz==1 and szfe_2!=100</script> </risk>
+  </cj>
+
+</allrisk>
+
+
