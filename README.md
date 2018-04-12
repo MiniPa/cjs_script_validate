@@ -12,11 +12,11 @@
 * Validator         风险比对对象  
 * RiskException     风险比对引擎异常  
 
-###2.主流程：
-###### 1.xml 读取风险配置信息, 产生风险 Validator 对象  
-###### 2.RiskManager.validates(~)  &nbsp;&nbsp;&nbsp;&nbsp; RiskManager.validate(~)  调用并启用风险管理方法  
-###### 3.RiskManager使用外部提供的符合 IValidateEngine 接口的风险校验器 和 被校验数据 开始进行校验，若为提供校验器则使用默认DefaultEngine实现
-###### 4.校验产生 Risk 风险，并返回 RiskResult 
+### 2.主流程：
+* 1.xml 读取风险配置信息, 产生风险 Validator 对象  
+* 2.RiskManager.validates(~)  &nbsp;&nbsp;&nbsp;&nbsp; RiskManager.validate(~)  调用并启用风险管理方法  
+* 3.RiskManager使用外部提供的符合 IValidateEngine 接口的风险校验器 和 被校验数据 开始进行校验，若为提供校验器则使用默认DefaultEngine实现
+* 4.校验产生 Risk 风险，并返回 RiskResult 
 
 ### 3.使用方式:
  *  1.Validator 实现比对对象接口, VFactory.getManager(validator) 获取 VMananger对象
